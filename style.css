@@ -567,19 +567,140 @@ body.hover-magnet .cursor-ring {
     margin-top: 2rem;
 }
 
-/* Mobile */
-@media (max-width: 900px) {
+/* --- RESPONSIVE DESIGN SYSTEM --- */
+
+/* Tablet (max-width: 1024px) */
+@media (max-width: 1024px) {
+    .container {
+        padding: 0 2rem;
+    }
+
     .holo-profile {
-        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .holo-name {
+        font-size: 2.5rem;
     }
 
     .vault-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .stack-card {
+        height: auto;
+        min-height: 400px;
+    }
+
+    .stack-visual {
+        width: 40%;
+    }
+
+    .stack-content {
+        width: 60%;
+        padding: 2rem;
+    }
+}
+
+/* Mobile (max-width: 768px) */
+@media (max-width: 768px) {
+
+    /* Global Typography */
+    html {
+        font-size: 14px;
+    }
+
+    /* Hero Section */
+    .hero-holo {
+        padding: 2rem 0;
+    }
+
+    .holo-profile {
         grid-template-columns: 1fr;
+        text-align: center;
+        gap: 3rem;
+    }
+
+    .holo-visual {
+        margin: 0 auto;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .scan-frame {
+        width: 220px;
+        height: 260px;
+    }
+
+    .holo-data {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .data-header {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .holo-name {
+        font-size: 2rem;
+    }
+
+    .holo-bio {
+        border-left: none;
+        border-top: 2px solid var(--accent);
+        padding-left: 0;
+        padding-top: 1rem;
+        margin-top: 1rem;
+    }
+
+    .holo-actions-wrapper {
+        flex-direction: column;
+        width: 100%;
+        gap: 1rem;
+    }
+
+    .btn-cyber-glitch {
+        width: 100%;
+        justify-content: center;
+    }
+
+    /* Timeline */
+    .timeline-container {
+        padding-left: 1.5rem;
+    }
+
+    .timeline-dot {
+        left: -2.1rem;
+        width: 12px;
+        height: 12px;
+        top: 0.2rem;
+    }
+
+    /* Tech Vault */
+    .vault-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Sticky Projects */
+    .stack-section {
+        margin-bottom: 5rem;
+    }
+
+    .stack-wrapper {
+        padding-bottom: 0;
     }
 
     .stack-card {
         flex-direction: column;
         height: auto;
+        position: relative;
+        /* Disable sticky on mobile */
+        top: 0 !important;
+        margin-bottom: 3rem;
+        transform: none !important;
     }
 
     .stack-visual {
@@ -591,6 +712,25 @@ body.hover-magnet .cursor-ring {
 
     .stack-content {
         width: 100%;
+        padding: 1.5rem;
+    }
+
+    .stack-header h3 {
+        font-size: 1.5rem;
+    }
+
+    .stack-num {
+        font-size: 2.5rem;
+    }
+
+    .gh-visual {
+        font-size: 4rem;
+        height: 150px;
+    }
+
+    /* Footer */
+    .clean-footer {
+        padding: 3rem 0 1rem;
     }
 
     .footer-top {
@@ -599,11 +739,17 @@ body.hover-magnet .cursor-ring {
         gap: 2rem;
     }
 
+    .footer-cta {
+        font-size: 2rem;
+    }
+
     .footer-bottom-row {
         flex-direction: column;
-        gap: 3rem;
+        gap: 2rem;
     }
-}/* --- Back to Top (Standard) --- */
+}
+
+/* --- Back to Top (Standard) --- */
 .back-to-top {
     position: fixed;
     bottom: 3rem;
